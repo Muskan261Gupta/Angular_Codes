@@ -1,0 +1,5 @@
+#for frontend
+ng serve --proxy-config proxy.conf.json
+
+#for backend
+npm start

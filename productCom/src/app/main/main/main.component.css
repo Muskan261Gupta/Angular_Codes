@@ -1,0 +1,82 @@
+.main {
+    width: 100%;
+    min-height: calc(100vh - 8rem);
+    height: calc(100vh - 8rem);
+    padding: 0rem .5rem;
+}
+
+.forms-container {
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding-right: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5rem;
+}
+
+.tab-view {
+    --tab-count: 2;
+    width: 50%;
+    height: 90%;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.tab-view .tab-label {
+    color: #fff;
+    width: 50%;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+
+.tab-view .tab-radio {
+    display: none;
+}
+
+.tab-1:checked ~ .label-1,
+.tab-2:checked ~ .label-2 {
+    background: var(--primary);
+}
+
+.tab-1:not(:checked) ~ .label-1:hover,
+.tab-2:not(:checked) ~ .label-2:hover {
+    background: #fff3;
+}
+
+.tab-view .tab-body {
+    display: none;
+    width: 100%;
+    height: calc(100% - 2rem);
+    padding-top: .5rem;
+}
+
+.login-tab-radio:checked ~ .login-form-tab,
+.signup-tab-radio:checked ~ .signup-form-tab {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .tab-view {
+        width: 100%
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        height: fit-content;
+    }
+    .forms-container {
+        width: 100%;
+        padding-right: initial;
+        float: initial;
+    }
+    .tab-view {
+        height: 100%;
+    }
+}

@@ -1,0 +1,25 @@
+<div class="forms">
+    <form class="login-form" #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+        <div *ngIf="loginForm.submitted" class="input-field-invalid">
+            <div *ngIf="loginForm.form.errors?.invalidCred">
+                Invalid Credientials
+            </div>
+            <div *ngIf="loginForm.form.errors?.emailNotFound">
+                Email Not Found
+            </div>
+        </div>
+        <input type="text" name="email" class="input-field" placeholder="Email" #email="ngModel" ngModel required>
+        <div *ngIf="email.invalid && (email.dirty || email.touched || loginForm.submitted)" class="input-field-invalid">
+            <div *ngIf="loginForm.controls['email'].errors?.required">
+                Email cannot be empty.
+            </div>
+        </div>
+        <input type="password" name="password" class="input-field" placeholder="Password" #password="ngModel" ngModel required>
+        <div *ngIf="password.invalid && (password.dirty || password.touched || loginForm.submitted)" class="input-field-invalid">
+            <div *ngIf="loginForm.controls['email'].errors?.required">
+                Password cannot be empty.
+            </div>
+        </div>
+        <button class="btn btn-success w-100">Login</button>
+    </form>
+</div>

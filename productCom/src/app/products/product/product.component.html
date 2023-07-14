@@ -1,0 +1,20 @@
+<main class="main">
+    <div class="search-box">
+        <div class="search-field-container glass">
+            <input type="text" name="" id="" class="input-field search-field" (input)="changeQuery($event)">
+            <button class="serarch-btn btn btn-info">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18 16H17.42L16.61 15.19C17.5 14 18 12.5 18 11C18 7.13 14.87 4 11 4C9.5 4 8 4.5 6.79 5.4C3.7 7.72 3.07 12.11 5.39 15.2C7.71 18.29 12.1 18.92 15.19 16.6L16 17.41V18L21 23L23 21L18 16M11 16C8.24 16 6 13.76 6 11S8.24 6 11 6 16 8.24 16 11 13.76 16 11 16M3 6L1 8V1H8L6 3H3V6M21 1V8L19 6V3H16L14 1H21M6 19L8 21H1V14L3 16V19H6Z" />
+                </svg>
+            </button>
+        </div>
+        <button class="btn raise-review-btn" (click)="openProductForm()">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M18,14H10.5L12.5,12H18M6,14V11.5L12.88,4.64C13.07,4.45 13.39,4.45 13.59,4.64L15.35,6.41C15.55,6.61 15.55,6.92 15.35,7.12L8.47,14M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2Z" />
+            </svg>
+            Raise A Review
+        </button>
+    </div>
+    <app-result></app-result>
+    <app-addproduct></app-addproduct>
+</main>

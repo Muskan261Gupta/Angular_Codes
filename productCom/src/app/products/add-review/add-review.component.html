@@ -1,0 +1,49 @@
+<div class="container glass" [style.display]="showReviewForm">
+    <form class="product-form" #reviewForm="ngForm" (ngSubmit)="reviewSubmit(reviewForm.value, $event)">
+        <h2 class="form-title">Add A Review</h2>
+        <div *ngIf="reviewForm.submitted" class="input-field-invalid">
+            <div *ngIf="reviewForm.form.errors?.badError">
+                Some Error has accured
+            </div>
+            <div *ngIf="reviewForm.form.errors?.success" class="success-message">
+                Review added Succesfully
+            </div>
+        </div>
+        <fieldset class="field-set">
+            <label>
+                Rating: {{ ratingValue }} {{ ratingText[ratingValue-1] }}
+                <input class="input-field" type="range" value="3" name="rating" #rating="ngModel" min="1" max="5" step="1" ngModel (input)="changerating($event)">
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <label>
+                Heading:
+                <input class="input-field" type="text" name="heading" #heading="ngModel" ngModel required>
+                <div *ngIf="heading.invalid && (heading.dirty || heading.touched || reviewForm.submitted)" class="input-field-invalid">
+                    <div *ngIf="reviewForm.controls['heading'].errors?.required">
+                        Heading cannot be empty.
+                    </div>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <label>
+                Review:
+                <textarea class="input-field" name="review" cols="30" rows="10" #review="ngModel" maxlength="400" ngModel required></textarea>
+                <div *ngIf="review.invalid && (review.dirty || review.touched || reviewForm.submitted)" class="input-field-invalid">
+                    <div *ngIf="reviewForm.controls['review'].errors?.required">
+                        Review cannot be empty.
+                    </div>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <button type="submit" class="btn btn-success review-btn">
+                Raise
+            </button>
+            <button type="reset" class="btn btn-danger review-btn" (click)="reviewCancel('none')">
+                Cancel
+            </button>
+        </fieldset>
+    </form>
+</div>

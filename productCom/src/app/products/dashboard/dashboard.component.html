@@ -1,0 +1,48 @@
+<main class="main">
+    <div class="tile glass" *ngIf="product !== null">
+        <div class="prod-info">
+            <div class="code">
+                <b>Code:</b> {{ product?.code }}
+            </div>
+            <div class="brand">
+                <b>Brand:</b> {{ product?.brand }}
+            </div>
+            <div class="name">
+                <b>Name:</b> {{ product?.name }}
+            </div>
+        </div>
+        <div class="count-review">
+            <span>
+                Total Reviews:
+                <span class="count-num">
+                    {{ reviewLength }}
+                </span>
+            </span>
+            <button class="btn btn-info add-review-btn" (click)="openReviewForm()">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M18,14H10.5L12.5,12H18M6,14V11.5L12.88,4.64C13.07,4.45 13.39,4.45 13.59,4.64L15.35,6.41C15.55,6.61 15.55,6.92 15.35,7.12L8.47,14M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2Z" />
+                </svg>
+                Add a Review
+            </button>
+        </div>
+    </div>
+    <div class="tile glass review-info" *ngFor="let i of review; let j = index">
+        <div class="id">
+            {{ j + 1 }}
+        </div>
+        <div class="details">
+            <div class="heading">
+                {{ i?.heading }}
+            </div>
+            <div class="review">
+                {{ i?.review }}
+            </div>
+        </div>
+        <div class="rating">
+            <svg style="width:24px;height:24px" viewBox="0 0 24 24" *ngFor="let _ of [].constructor(i?.rating);">
+                <path fill="currentColor" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" />
+            </svg>
+        </div>
+    </div>
+    <app-add-review [productCode]="product?.code" (loadReview)="loadReviewsByProdCode($event)"></app-add-review>
+</main>

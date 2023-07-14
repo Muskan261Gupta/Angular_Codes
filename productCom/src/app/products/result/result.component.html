@@ -1,0 +1,25 @@
+<div class="results">
+    <div *ngIf="resultCount === 0">
+        "No Record Found"
+    </div>
+    <div *ngFor="let i of results" class="tile glass">
+        <div class="prod-info">
+            <div class="code">
+                <b>Code:</b> {{ i?.code }}
+            </div>
+            <div class="brand">
+                <b>Brand:</b> {{ i?.brand }}
+            </div>
+            <div class="name">
+                <b>Name:</b> {{ i?.name }}
+            </div>
+        </div>
+        <div class="link">
+            <a [routerLink]="['./', i?.code]" class="prod-link">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>

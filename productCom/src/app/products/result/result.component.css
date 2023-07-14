@@ -1,0 +1,32 @@
+.results {
+    height: calc(100% - 4rem);
+    overflow: auto;
+}
+
+.prod-info {
+    margin-right: auto;
+}
+
+.tile {
+    margin-bottom: .5rem;
+    padding: .5rem;
+    color: #fff;
+    border-radius: .5rem;
+    display: flex;
+}
+
+.link {
+    height: 3.5rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prod-link {
+    color: #fff;
+}
+
+.prod-link:hover {
+    color: var(--primary);
+}

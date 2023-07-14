@@ -1,0 +1,57 @@
+<div class="container glass" [style.display]="showProductForm">
+    <form class="product-form" #productForm="ngForm" (ngSubmit)="productSubmit(productForm.value)">
+        <h2 class="form-title">Raise A Review</h2>
+        <div *ngIf="productForm.submitted" class="input-field-invalid">
+            <div *ngIf="productForm.form.errors?.required">
+                Some required fields are empty
+            </div>
+            <div *ngIf="productForm.form.errors?.conflict">
+                Product already exist, Redirecting in {{ redirectCountdown }} Seconds
+            </div>
+            <div *ngIf="productForm.form.errors?.success" class="success-message">
+                Product added Succesfully, Redirecting in {{ redirectCountdown }} Seconds
+            </div>
+        </div>
+        <fieldset class="field-set">
+            <label>
+                Product Code:
+                <input class="input-field capatelize" type="text" name="code" #code="ngModel" ngModel required>
+                <div *ngIf="code.invalid && (code.dirty || code.touched || productForm.submitted)" class="input-field-invalid">
+                    <div *ngIf="productForm.controls['code'].errors?.required">
+                        Product Code cannot be empty.
+                    </div>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <label>
+                Product Name:
+                <input class="input-field" type="text" name="name" #name="ngModel" ngModel required>
+                <div *ngIf="name.invalid && (name.dirty || name.touched || productForm.submitted)" class="input-field-invalid">
+                    <div *ngIf="productForm.controls['name'].errors?.required">
+                        Product Name cannot be empty.
+                    </div>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <label>
+                Brand:
+                <input class="input-field" type="text" name="brand" #brand="ngModel" ngModel required>
+                <div *ngIf="brand.invalid && (brand.dirty || brand.touched || productForm.submitted)" class="input-field-invalid">
+                    <div *ngIf="productForm.controls['brand'].errors?.required">
+                        Product Brand cannot be empty.
+                    </div>
+                </div>
+            </label>
+        </fieldset>
+        <fieldset class="field-set">
+            <button type="submit" class="btn btn-success review-btn" [disabled]="submitBtnDisabled">
+                Raise
+            </button>
+            <button type="reset" class="btn btn-danger review-btn" (click)="productCancel('none')">
+                Cancel
+            </button>
+        </fieldset>
+    </form>
+</div>

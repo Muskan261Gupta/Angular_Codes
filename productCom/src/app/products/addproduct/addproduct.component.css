@@ -1,0 +1,54 @@
+.container {
+    width: 100%;
+    height: calc(100% - 8rem);
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-title {
+    color: #fff;
+    margin-bottom: .5rem;
+    text-decoration: underline;
+}
+
+.field-set {
+    width: 100%;
+    border: none;
+}
+
+.field-set label {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.capatelize {
+    text-transform: uppercase;
+}
+
+.review-btn {
+    width: calc(50% - .25rem);
+    height: 3rem;
+    padding: 0;
+}
+
+.review-btn:first-child {
+    margin-right: .5rem;
+}
+
+.success-message {
+    color: #0f0;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+}

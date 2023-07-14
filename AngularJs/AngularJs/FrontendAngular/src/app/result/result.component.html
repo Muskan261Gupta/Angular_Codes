@@ -1,0 +1,44 @@
+<nav class="navbar navbar-light justify-content-between border border-dark bg-success">
+  <a class="navbar-brand">Result Management System</a>
+  <form class="form-inline">
+
+    <a href="login" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+  </form>
+</nav>
+<div class="container text-center" *ngFor="let us of data">
+  <div class="container result">
+    <div class="mb-2">
+      <h4>
+        <div class="row">
+          <div class="col-sm-4">Roll No: </div>
+          <div class="col-sm-4"> {{us.rollno}} </div>
+        </div>
+      </h4>
+
+    </div>
+    <div class="mb-2">
+      <h4>
+        <div class="row">
+          <div class="col-sm-4">Name: </div>
+          <div class="col-sm-4"> {{us.name}} </div>
+        </div>
+      </h4>
+    </div>
+    <div class="mb-2">
+      <h4>
+        <div class="row">
+          <div class="col-sm-4">DOB: </div>
+          <div class="col-sm-4"> {{us.DOB}} </div>
+        </div>
+      </h4>
+    </div>
+    <div class="mb-2">
+      <h4>
+        <div class="row">
+          <div class="col-sm-4">Marks: </div>
+          <div class="col-sm-4"> {{us.marks}} </div>
+        </div>
+      </h4>
+    </div>
+  </div>
+</div>

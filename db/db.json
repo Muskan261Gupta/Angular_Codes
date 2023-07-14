@@ -1,0 +1,157 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "KFC restaurant",
+      "address": "noida",
+      "email": "test@test.com"
+    },
+    {
+      "id": 2,
+      "name": "Haldiram restaurant",
+      "address": "delhi",
+      "email": "testing@test.com"
+    },
+    {
+      "name": "Domino restaurant",
+      "address": "noida sector 34",
+      "email": "dm@test.com",
+      "id": 3
+    },
+    {
+      "name": "Biggies restaurant",
+      "address": "Meerut",
+      "email": "Biggies@test.com",
+      "id": 4
+    },
+    {
+      "name": "burgerKing restaurant",
+      "address": "Luckhnow",
+      "email": "burgerKing@test.com",
+      "id": 5
+    }
+  ],
+  "students": [
+    {
+      "name": "Manvi",
+      "dob": "01-07-2001",
+      "marks": "91",
+      "id": 1
+    },
+    {
+      "name": "Komal",
+      "dob": "01-01-2001",
+      "marks": "70",
+      "id": 2
+    },
+    {
+      "name": "Harry",
+      "dob": "11-11-2000",
+      "marks": "91",
+      "id": 3
+    },
+    {
+      "name": "Rajat",
+      "dob": "30-12-2000",
+      "marks": "81",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Shubham",
+      "dob": "26-07-2000",
+      "marks": "95"
+    },
+    {
+      "name": "Muskan Gupta",
+      "dob": "21-12-1999",
+      "marks": "100",
+      "id": 6
+    },
+    {
+      "name": "Naman",
+      "dob": "21-10-2000",
+      "marks": "69",
+      "id": 9
+    }
+  ],
+  "RegisteredUsers": [
+    {
+      "name": "Muskan",
+      "email": "muskan@gmail.com",
+      "number": "8937011111",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "name": "Muskan Gupta",
+      "email": "2018guptamuskan@gmail.com",
+      "number": "8937",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "Shivam",
+      "email": "Shivam@gmail.com",
+      "number": "90546788",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "Harry",
+      "email": "Harry@gmail.com",
+      "number": "6567789",
+      "password": "12345",
+      "id": 4
+    },
+    {
+      "name": "Naman",
+      "email": "naman@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 5
+    },
+    {
+      "name": "Somya",
+      "email": "Somya@gmail.com",
+      "number": "2536738990",
+      "password": "45677",
+      "id": 6
+    },
+    {
+      "name": "Naman Goel",
+      "email": "namanG@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 7
+    },
+    {
+      "name": "Himesh",
+      "email": "naman@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 8
+    },
+    {
+      "name": "Mahica",
+      "email": "naman@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 9
+    },
+    {
+      "name": "Sameer",
+      "email": "naman@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 10
+    },
+    {
+      "name": "Jyoti",
+      "email": "naman@gmail.com",
+      "number": "267899",
+      "password": "789",
+      "id": 11
+    }
+  ]
+}

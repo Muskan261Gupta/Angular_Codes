@@ -1,0 +1,76 @@
+.input-field {
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    background: #0005!important;
+    margin-bottom: .5rem;
+}
+
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus,
+.input-field:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px #0006 inset !important;
+    -webkit-box-shadow: 0 0 0 30px #0006 inset !important;
+    -webkit-text-fill-color: #fff!important;
+}
+
+.input-field:-moz-autofill,
+.input-field:-moz-autofill:hover,
+.input-field:-moz-autofill:focus,
+.input-field:-moz-autofill:active {
+    box-shadow: 0 0 0 30px #0006 inset !important;
+    -moz-box-shadow: 0 0 0 30px #0006 inset !important;
+    -moz-text-fill-color: #fff!important;
+}
+
+.input-field:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: #fff;
+}
+
+.btn {
+    color: var(--theme-color-2);
+
+    padding: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: .5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff3;
+    color: #fff;
+}
+
+.btn:active {
+    box-shadow: .1rem .1rem .2rem #0008 inset,
+    -.1rem -.1rem .2rem #fff8 inset;
+}
+
+.btn-success:hover {
+    background: #080;
+}
+
+.btn-danger:hover {
+    background: #f00;
+}
+
+.btn-info:hover {
+    background: var(--primary);
+}
+
+.input-field-invalid {
+    color: red;
+    width: 100%;
+    padding-bottom: .3rem;
+    padding-left: .5rem;
+    font-weight: 600;
+}

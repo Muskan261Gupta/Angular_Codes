@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light justify-content-between border border-dark bg-success">
+    <a class="navbar-brand">Result Management System</a>
+    <a href="login" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+  </nav>
+  <div >
+      <form [formGroup]="studentValidation"  (ngSubmit)="StudentSubmit()">
+        <div class="form-group row">
+          <div class="col-sm-4 col-form-label ml-5 mt-5">
+          <label for="rollno" class="form-label">Roll No</label>
+          </div>
+          <div class="col-sm-6 ml-4 mt-5">
+          <input type="number" class="form-control" id="rollno" formControlName="rollno" required>
+        </div>
+       
+        <div class="col-sm-4 col-form-label ml-5 mb-3 mt-2">
+          <label for="name" class="form-label">Name</label>
+          </div>
+          <div class="col-sm-6 ml-4">
+          <input type="name" class="form-control" id="name" formControlName="name" required>
+        </div>
+       <div class="container text-center">
+        <button type="submit" class="btn btn-primary" >Login</button>
+      </div>
+      </div>
+      </form>
+    </div>
+
+
+   

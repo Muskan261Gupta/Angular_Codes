@@ -1,0 +1,31 @@
+<nav class="navbar navbar-light justify-content-between border border-dark bg-success">
+    <a class="navbar-brand">Result Management System</a>
+    <a href="login" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+    
+  </nav>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>{{errormsg}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+    <form [formGroup]="techerValidation"  (ngSubmit)="teacherSubmit()">
+      <div class="form-group row">
+          <div class="col-sm-4 col-form-label ml-5 mt-5">
+          <label for="username" class="form-label">Username</label>
+        </div>
+        <div class="col-sm-6 ml-4 mt-5">
+          <input type="text" class="form-control" id="username" formControlName="username" required>
+        
+        </div>
+        <div class="col-sm-4 col-form-label ml-5 mb-3 mt-2">
+          <label for="Password" class="form-label">Password</label>
+          </div>
+          <div class="col-sm-6 ml-4">
+          <input type="password" class="form-control" id="Password" formControlName="password" required>
+        </div>
+       <div class="container text-center">
+        <button type="submit" class="btn btn-primary" >Login</button>
+        </div>
+      </div>
+      </form>

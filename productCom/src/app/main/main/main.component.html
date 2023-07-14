@@ -1,0 +1,18 @@
+<main class="main">
+    <app-dashboard></app-dashboard>
+    <div class="forms-container">
+        <div class="tab-view glass">
+            <input type="radio" name="form-tab" id="loginTabRadio" class="login-tab-radio tab-radio tab-1" checked>
+            <label for="loginTabRadio" class="tab-label label-1">Login</label>
+            <input type="radio" name="form-tab" id="signupTabRadio" class="signup-tab-radio tab-radio tab-2">
+            <label for="signupTabRadio" class="tab-label label-2">Signup</label>
+
+            <div class="login-form-tab tab-body tab-default">
+                <app-login-form></app-login-form>
+            </div>
+            <div class="signup-form-tab tab-body">
+                <app-signup-form></app-signup-form>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,59 @@
+<nav class="navbar navbar-light justify-content-between border border-dark bg-success">
+    <a class="navbar-brand">Result Management System</a>
+    <form class="form-inline">
+      
+      <a href="login" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</a>
+    </form>
+  </nav>
+  <div *ngIf="errmssg" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{errmssg}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div *ngIf='succes' class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>{{succes}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+    <form [formGroup]="addRecord"  (ngSubmit)="SubmitRecord()">
+      <div class="form-group row">
+        <div class="col-sm-4 col-form-label ml-5 mt-5">
+          <label for="rollno" class="form-label">Roll No</label>
+          </div>
+          <div class="col-sm-6 ml-4 mt-5">
+          <input type="number" class="form-control" id="rollno" formControlName="rollno">
+          </div>
+          
+          <div class="col-sm-4 col-form-label ml-5 mb-3 mt-2">
+            <label for="name" class="form-label">Name</label>
+          </div>
+          <div class="col-sm-6 ml-4">
+            <input type="name" class="form-control" id="name" formControlName="name">
+          </div>
+
+        
+          <div class="col-sm-4 col-form-label ml-5 mb-3 mt-2">
+          <label for="Marks" class="form-label">Marks</label>
+        </div>
+        <div class="col-sm-6 ml-4">
+          <input type="number" class="form-control" id="mark" formControlName="marks">
+        </div>
+
+        <div class="col-sm-4 col-form-label ml-5 mb-3 mt-2">
+            <label for="DOB" class="form-label">DOB</label>
+          </div>
+          <div class="col-sm-6 ml-4">
+            <input type="date" class="form-control" id="dob" formControlName="DOB">
+          </div>
+
+          
+       <div class="container text-center" *ngIf="!getparamid" (click)="SubmitRecord()">
+        <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+        <div class="container text-center" *ngIf="getparamid" (click)="Update()">
+          <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </form>
